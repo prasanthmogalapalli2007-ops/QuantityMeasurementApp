@@ -11,7 +11,7 @@ public class QuantityMeasurementApp {
             this.value = value;
         }
 
-        // Override equals method
+        // Override equals() method
         @Override
         public boolean equals(Object obj) {
 
@@ -23,15 +23,15 @@ public class QuantityMeasurementApp {
             if (obj == null || this.getClass() != obj.getClass())
                 return false;
 
-            // Cast safely
+            // Type casting
             Feet other = (Feet) obj;
 
-            // Compare values
+            // Compare values safely
             return Double.compare(this.value, other.value) == 0;
         }
     }
 
-    // 🔹 Main method (for execution)
+    // 🔹 Main method
     public static void main(String[] args) {
         Feet f1 = new Feet(1.0);
         Feet f2 = new Feet(1.0);
