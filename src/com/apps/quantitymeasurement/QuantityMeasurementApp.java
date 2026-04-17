@@ -1,7 +1,9 @@
-class QuantityMeasurementApp {
+package com.apps.quantitymeasurement;
 
-    // Inner class
-    static class Feet {
+public class QuantityMeasurementApp {
+
+    // 🔹 Inner Class: Feet
+    public static class Feet {
         private final double value;
 
         // Constructor
@@ -13,27 +15,30 @@ class QuantityMeasurementApp {
         @Override
         public boolean equals(Object obj) {
 
-            // Step 1: Same reference
+            // Same reference
             if (this == obj)
                 return true;
 
-            // Step 2: Null or different class
+            // Null or different class
             if (obj == null || this.getClass() != obj.getClass())
                 return false;
 
-            // Step 3: Type casting
+            // Cast safely
             Feet other = (Feet) obj;
 
-            // Step 4: Compare values safely
+            // Compare values
             return Double.compare(this.value, other.value) == 0;
         }
     }
 
-    // Main method
+    // 🔹 Main method (for execution)
     public static void main(String[] args) {
         Feet f1 = new Feet(1.0);
         Feet f2 = new Feet(1.0);
 
-        System.out.println("Are equal? " + f1.equals(f2));
+        boolean result = f1.equals(f2);
+
+        System.out.println("Input: 1.0 ft and 1.0 ft");
+        System.out.println("Output: Equal (" + result + ")");
     }
 }
